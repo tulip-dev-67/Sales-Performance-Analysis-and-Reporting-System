@@ -1,0 +1,299 @@
+
+=== 1. Overall metrics ===
+total_sales             2,326,153.86
+total_quantity             38,644.00
+total_profit              292,273.46
+avg_sales_per_order           455.13
+overall_profit_margin           0.13
+dtype: float64
+
+=== 2a. Top 10 products by sales ===
+product_name
+Canon imageCLASS 2200 Advanced Copier                                         61,599.82
+Fellowes PB500 Electric Punch Plastic Comb Binding Machine with Manual Bind   27,453.38
+Cisco TelePresence System EX90 Videoconferencing Unit                         22,638.48
+HON 5400 Series Task Chairs for Big and Tall                                  21,870.58
+GBC DocuBind TL300 Electric Binding System                                    19,823.48
+GBC Ibimaster 500 Manual ProClick Binding System                              19,024.50
+Hewlett Packard LaserJet 3310 Copier                                          18,839.69
+HP Designjet T520 Inkjet Large Format Printer - 24" Color                     18,374.90
+GBC DocuBind P400 Electric Binding System                                     17,965.07
+High Speed Automatic Electric Letter Opener                                   17,030.31
+Name: sales, dtype: float64
+
+=== 2b. Top 10 products by quantity ===
+product_name
+Staples                                                       234
+Staple envelope                                               170
+Easy-staple paper                                             150
+Staples in misc. colors                                        86
+KI Adjustable-Height Table                                     79
+Nu-Dell Executive Frame                                        76
+GBC DocuBind P50 Personal Binding Machine                      72
+Avery Non-Stick Binders                                        71
+Storex Dura Pro Binders                                        71
+GBC Premium Transparent Covers with Diagonal Lined Pattern     67
+Name: quantity, dtype: int64
+
+=== 2c. Top 10 customers by sales ===
+customer_id  customer_name     
+SM-20320     Sean Miller          25,043.05
+TC-20980     Tamara Chand         19,052.22
+RB-19360     Raymond Buch         15,117.34
+TA-21385     Tom Ashbrook         14,595.62
+AB-10105     Adrian Barton        14,473.57
+KL-16645     Ken Lonsdale         14,175.23
+SC-20095     Sanjit Chand         14,142.33
+HL-15040     Hunter Lopez         12,873.30
+SE-20110     Sanjit Engle         12,209.44
+CC-12370     Christopher Conant   12,129.07
+Name: sales, dtype: float64
+
+=== 3a. Sales and profit by state (top 15) ===
+                    sales     profit
+state                               
+CALIFORNIA     457,687.63  76,381.39
+NEW YORK       310,876.27  74,038.55
+TEXAS          170,188.05 -25,729.36
+WASHINGTON     138,641.27  33,402.65
+PENNSYLVANIA   116,511.91 -15,559.96
+FLORIDA         89,473.71  -3,399.30
+ILLINOIS        80,166.10 -12,607.89
+OHIO            77,976.76 -16,959.32
+MICHIGAN        76,269.61  24,463.19
+VIRGINIA        70,636.72  18,597.95
+NORTH CAROLINA  55,603.16  -7,490.91
+INDIANA         53,555.36  18,382.94
+GEORGIA         49,095.84  16,250.04
+KENTUCKY        36,591.75  11,199.70
+NEW JERSEY      35,764.31   9,772.91
+
+=== 3b. Sales and profit by city (top 15) ===
+                   sales     profit
+city                               
+NEW YORK CITY 256,368.16  62,036.98
+LOS ANGELES   175,851.34  30,440.76
+SEATTLE       119,540.74  29,156.10
+SAN FRANCISCO 112,669.09  17,507.39
+PHILADELPHIA  109,077.01 -13,837.77
+HOUSTON        64,504.76 -10,153.55
+CHICAGO        48,539.54  -6,654.57
+SAN DIEGO      47,521.03   6,377.20
+JACKSONVILLE   44,713.18  -2,323.84
+SPRINGFIELD    43,054.34   6,200.70
+DETROIT        42,446.94  13,181.79
+COLUMBUS       38,424.87   5,909.16
+NEWARK         28,576.12   5,793.76
+COLUMBIA       25,283.32   5,606.12
+LAFAYETTE      25,036.20  10,018.39
+
+=== 3c. Sales and profit by region ===
+             sales     profit
+region                       
+WEST    739,813.61 110,798.82
+EAST    691,447.68  94,859.90
+CENTRAL 503,170.67  39,865.31
+SOUTH   391,721.91  46,749.43
+
+=== 3d. States with above-median sales but negative profit ===
+                    sales     profit
+state                               
+TEXAS          170,188.05 -25,729.36
+PENNSYLVANIA   116,511.91 -15,559.96
+FLORIDA         89,473.71  -3,399.30
+ILLINOIS        80,166.10 -12,607.89
+OHIO            77,976.76 -16,959.32
+NORTH CAROLINA  55,603.16  -7,490.91
+ARIZONA         35,282.00  -3,427.92
+COLORADO        32,108.12  -6,527.86
+TENNESSEE       30,661.87  -5,341.69
+OREGON          17,431.15  -1,190.47
+
+=== 3e. Driver check: average discount in those states vs overall ===
+flagged_states_avg_discount   0.34
+overall_avg_discount          0.16
+dtype: float64
+
+=== 3f. Driver check: profit by sub-category in those states (worst 8) ===
+sub_category
+BINDERS       -38,510.50
+MACHINES      -29,555.35
+TABLES        -24,976.93
+BOOKCASES     -11,318.13
+APPLIANCES     -6,131.81
+CHAIRS         -5,685.23
+STORAGE        -4,249.35
+FURNISHINGS    -3,788.83
+Name: profit, dtype: float64
+
+=== 4a. Category: sales and quantity ===
+                     sales  quantity
+category                            
+FURNITURE       754,367.27      8359
+OFFICE SUPPLIES 731,893.31     23268
+TECHNOLOGY      839,893.28      7017
+
+=== 4b. Sub-category: sales and quantity ===
+                  sales  quantity
+sub_category                     
+CHAIRS       335,486.88      2429
+PHONES       331,842.64      3357
+STORAGE      224,644.55      3191
+TABLES       208,020.18      1261
+BINDERS      207,354.88      6071
+MACHINES     189,925.03       442
+ACCESSORIES  167,380.32      2976
+COPIERS      150,745.29       242
+BOOKCASES    115,361.20       878
+APPLIANCES   108,213.18      1750
+FURNISHINGS   95,499.01      3791
+PAPER         79,540.54      5207
+SUPPLIES      46,725.50       653
+ART           27,659.01      3092
+ENVELOPES     16,528.36       914
+LABELS        12,695.04      1410
+FASTENERS      8,532.24       980
+
+=== 5a. Sales and profit per person ===
+                       sales     profit
+person                                 
+Chuck Magee       691,447.68  94,859.90
+Fred Suzuki       391,721.91  46,749.43
+Roxanne Rodriguez 503,170.67  39,865.31
+Sadie Pawthorne   739,813.61 110,798.82
+
+=== 5b. Sales and quantity per category per person ===
+                   quantity                                 sales                           
+category          FURNITURE OFFICE SUPPLIES TECHNOLOGY  FURNITURE OFFICE SUPPLIES TECHNOLOGY
+person                                                                                      
+Chuck Magee            2404            6740       2005 211,851.20      211,658.40 267,938.07
+Fred Suzuki            1291            3800       1118 117,298.68      125,651.31 148,771.91
+Roxanne Rodriguez      1838            5438       1544 164,537.65      168,216.71 170,416.31
+Sadie Pawthorne        2826            7290       2350 260,679.73      226,366.89 252,766.99
+
+=== 6a. Returns ===
+total_orders      5,111.00
+returned_orders     296.00
+return_rate           0.06
+dtype: float64
+
+=== 6b. Return rate by category ===
+                 orders  returned_orders  return_rate
+category                                             
+TECHNOLOGY         1560              123         0.08
+FURNITURE          1819              136         0.07
+OFFICE SUPPLIES    3812              234         0.06
+
+=== 6c. Return rate by sub-category (top 8) ===
+              orders  returned_orders  return_rate
+sub_category                                      
+MACHINES         114               13         0.11
+TABLES           314               30         0.10
+APPLIANCES       459               40         0.09
+PHONES           826               71         0.09
+SUPPLIES         189               16         0.08
+FASTENERS        226               19         0.08
+PAPER           1205               99         0.08
+BINDERS         1339              108         0.08
+
+=== 7a. Region x Segment counts (orders) ===
+segment  CONSUMER  CORPORATE  HOME OFFICE
+region                                   
+CENTRAL       608        348          223
+EAST          741        468          266
+SOUTH         444        247          131
+WEST          835        489          311
+
+=== 7b. Segment mix per region (%) ===
+segment  CONSUMER  CORPORATE  HOME OFFICE
+region                                   
+CENTRAL     51.57      29.52        18.91
+EAST        50.24      31.73        18.03
+SOUTH       54.01      30.05        15.94
+WEST        51.07      29.91        19.02
+
+=== 7c. Overall segment mix (%) ===
+segment
+CONSUMER      51.42
+CORPORATE     30.37
+HOME OFFICE   18.22
+Name: proportion, dtype: float64
+
+=== 7d. Difference from overall mix (percentage points) ===
+segment  CONSUMER  CORPORATE  HOME OFFICE
+region                                   
+CENTRAL      0.15      -0.85         0.70
+EAST        -1.18       1.36        -0.18
+SOUTH        2.60      -0.32        -2.28
+WEST        -0.35      -0.46         0.81
+
+=== 8a. Product metrics (first 5 rows) ===
+                                                      product_name    sales  quantity  profit  n_orders  returned_orders  return_rate  adj_profit  adj_margin
+product_id                                                                                                                                                   
+FUR-BO-10000112   Bush Birmingham Collection Bookcase, Dark Cherry   825.17         9 -117.88         1             0.00         0.00     -117.88       -0.14
+FUR-BO-10000330  Sauder Camden County Barrister Bookcase, Plank... 1,064.62        10   24.20         3             1.00         0.33       16.13        0.02
+FUR-BO-10000362                 Sauder Inglewood Library Bookcases 2,154.35        14  311.18         5             1.00         0.20      248.95        0.12
+FUR-BO-10000468            O'Sullivan 2-Shelf Heavy-Duty Bookcases   723.84        21 -133.11         6             1.00         0.17     -110.92       -0.15
+FUR-BO-10000711                          Hon Metal Bookcases, Gray   851.76        12  229.98         2             0.00         0.00      229.98        0.27
+
+=== 8b. Underperforming products (>=10 orders; top-10% return rate or bottom-10% adj margin) ===
+                                                      product_name  n_orders  return_rate  adj_profit  adj_margin
+product_id                                                                                                       
+OFF-BI-10004140                            Avery Non-Stick Binders        13         0.00      -13.47       -0.18
+OFF-ST-10002574              SAFCO Commercial Wire Shelving, Black        10         0.00     -635.44       -0.15
+OFF-ST-10004804           Belkin 19" Vented Equipment Shelf, Black        10         0.00     -179.67       -0.13
+FUR-CH-10003396                          Global Deluxe Steno Chair        10         0.10     -194.68       -0.11
+OFF-BI-10000343  Pressboard Covers with Storage Hooks, 9 1/2" x...        12         0.08      -10.89       -0.11
+OFF-BI-10003676  GBC Standard Recycled Report Covers, Clear Pla...        12         0.00      -27.17       -0.10
+FUR-CH-10003774    Global Wood Trimmed Manager's Task Chair, Khaki        14         0.14     -431.25       -0.10
+OFF-BI-10001757  Pressboard Hanging Data Binders for Unburst Sh...        10         0.00      -10.14       -0.09
+FUR-CH-10002880          Global High-Back Leather Tilter, Burgundy        14         0.07     -440.83       -0.08
+OFF-ST-10002743                      SAFCO Boltless Steel Shelving        10         0.20     -376.38       -0.08
+OFF-ST-10001522  Gould Plastics 18-Pocket Panel Bin, 34w x 5-1/...        10         0.00     -172.94       -0.08
+FUR-TA-10001039                         KI Adjustable-Height Table        11         0.09     -205.57       -0.07
+OFF-ST-10001809                  Fellowes Officeware Wire Shelving        11         0.00     -332.37       -0.07
+OFF-BI-10001116      Wilson Jones 1" Hanging DublLock Ring Binders        10         0.10       -7.70       -0.07
+OFF-BI-10004632                Ibico Hi-Tech Manual Binding System        14         0.14     -210.92       -0.04
+
+=== 8c. Shipping duration by ship mode ===
+                mean  median  std
+ship_mode                        
+FIRST CLASS     2.18    2.00 0.77
+SAME DAY        0.04    0.00 0.21
+SECOND CLASS    3.24    3.00 1.19
+STANDARD CLASS  4.99    5.00 1.01
+
+=== 8d. Shipping duration by region ===
+         mean  median  std
+region                    
+CENTRAL  4.05    4.00 1.69
+EAST     3.91    4.00 1.72
+SOUTH    3.96    4.00 1.74
+WEST     3.94    4.00 1.80
+
+=== 8e. Return rate by ship mode ===
+                orders  returned_orders  return_rate
+ship_mode                                           
+FIRST CLASS        795               54         0.07
+SAME DAY           266               19         0.07
+SECOND CLASS       982               55         0.06
+STANDARD CLASS    3068              168         0.05
+
+=== 8f. Return rate by region ===
+         orders  returned_orders  return_rate
+region                                       
+CENTRAL    1179               39         0.03
+EAST       1475               44         0.03
+SOUTH       822               24         0.03
+WEST       1635              189         0.12
+
+=== 8g/8h. Sales, profit and margin by discount band ===
+               lines  quantity        sales     profit  margin
+discount_band                                                 
+0%              4924     18762 1,105,224.67 326,683.17    0.30
+0-10%             96       377    54,952.50   9,099.97    0.17
+10-20%          3758     14054   801,497.92  92,498.94    0.12
+20-30%           229       853   104,192.69 -10,501.39   -0.10
+30-40%           234       894   130,991.22 -25,477.51   -0.19
+40-50%            77       286    64,403.51 -22,999.54   -0.36
+50%+             874      3418    64,891.35 -77,030.19   -1.19

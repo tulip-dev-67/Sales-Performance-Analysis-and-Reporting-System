@@ -1,0 +1,40 @@
+rows      : 10192 | SQL: 10192
+sales     : 2326153.86 | SQL: 2326153.86
+profit    : 292273.46 | SQL: 292273.46
+quantity  : 38644 | SQL: 38644
+returned  : 800 | SQL: 800
+
+null counts per column (pandas):
+none
+
+dtypes:
+ row_id                        int64
+order_id                        str
+order_date           datetime64[us]
+ship_date            datetime64[us]
+customer_id                     str
+customer_name                   str
+segment                         str
+city                            str
+state                           str
+region                          str
+product_id                      str
+category                        str
+sub_category                    str
+product_name                    str
+sales                       float64
+quantity                      int64
+discount                    float64
+profit                      float64
+ship_mode                       str
+is_returned                   int64
+person                          str
+order_year                    int64
+order_month                   int64
+order_quarter                 int64
+unit_price                  float64
+profit_margin               float64
+shipping_duration             int64
+dtype: object
+
+All checks passed.
